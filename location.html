@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+  <title>
+
+  </title>
+
+ <body >
+<p id="demo"></p>
+ <script>
+    function assignDoc(){
+      location.assign("doc.txt");
+    }
+
+    function assignLink(){
+      location.assign("https://google.com");
+    }
+
+    function replaceLink(){
+      location.replace("https://oracle.com");
+    }
+  
+  function replaceDoc(){
+      location.replace("replacer.txt");
+    }
+
+      function reloadFromServer(){
+      location.reload("true");
+    }
+      function reloadFromCash(){
+      location.reload();
+    }
+     
+     window.onload = function() {
+       window.document.getElementById("length").innerHTML= history.length;
+        }
+ </script>
+     <p>Host name:</p><p id="host"></p>
+
+    <div> <input type="button" value="assign doc" onclick="assignDoc()"></div>
+    <div> <input type="button" value="assign link" onclick="assignLink()"></div>
+    <div> <input type="button" value="replace doc" onclick="replaceDoc()"></div>
+    <div> <input type="button" value="replace link" onclick="replaceLink()"></div>
+    <div> <input type="button" value="reload from server" onclick="reloadFromServer()"></div>
+    <div> <input type="button" value="reload from cashe" onclick="reloadFromCashe()"></div>
+         
+         <p>History functions:</p>
+     <p>Lenght of history:</p><p id="length"></p>
+    <div> <input type="button" value="assign doc" onclick="assignDoc()"></div>
+    <div> <input type="button" value="assign link" onclick="assignLink()"></div>
+    <div> <input type="button" value="replace doc" onclick="replaceDoc()"></div>
+    </body>
+</html>

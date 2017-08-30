@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+  <title>
+
+  </title>
+
+ <body >
+<p id="demo"></p>
+ <script>
+    function assignDoc(){
+      location.assign("doc.txt");
+    }
+
+    function assignLink(){
+      location.assign("https://google.com");
+    }
+
+    function backFunc(){
+      window.history.back();
+    }
+  
+  
+    function forwardFunc(){
+      window.history.forward();
+    }
+
+
+
+    function goFunc(){
+      window.history.go(-2);
+    }
+
+   window.onload = function(){
+    var x = location.hostname;
+    document.getElementById("host").innerHTML= x;
+ }
+  
+ </script>
+     <p>Host name:</p><p id="host"></p>
+
+    <div> <input type="button" value="assign doc" onclick="assignDoc()"></div>
+    <div> <input type="button" value="assign link" onclick="assignLink()"></div>
+    <div> <input type="button" value="back" onclick="backFunc()"></div>
+    <div> <input type="button" value="forward" onclick="forwardFunc()"></div>
+   <div> <input type="button" value="go" onclick="goFunc()"></div>
+   
+         
+
+    </body>
+</html>
