@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+  <title>
+
+  </title>
+
+ <body >
+<p id="demo"></p>
+
+	<script>
+ 	var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+	var h = window.innerHeight
+			|| document.documentElement.clientHeight
+		    || document.body.clientHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+
+       var myWindow;
+
+       function newPage(){
+       	myWindow = window.open("","myNewPage","_blank","left=100 width=500, height=600");
+       }
+
+       function openPage(){
+           myWindow = window.open("http://google.com");
+           myWindow.focus();
+       }
+
+       function closePage(){
+       	 if(!myWindow)
+              window.alert("page hasn't been opened");
+          else {
+       	  	myWindow.close();
+            window.alert("Page is closed");
+       	   }
+       }
+
+</script>
+    <div> <input type="button" value="new page" onclick="newPage()"></div>
+    <div> <input type="button" value="open page" onclick="openPage()"></div>
+    <div> <input type="button" value="close page" onclick="closePage()"></div>
+
+    </body>
+</html>
