@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <title>
+
+  </title>
+
+ <body >
+<p id="demo"></p>
+ <script>
+    
+    //var x = document.getElementById("geo");
+
+   window.onload = function(){
+    document.getElementById("appCode").innerHTML= navigator.appCodeName;
+    document.getElementById("appName").innerHTML= navigator.appName;
+    document.getElementById("appVers").innerHTML= navigator.appVersion;
+    document.getElementById("cookieEnabl").innerHTML= navigator.cookieEnabled;
+    
+    document.getElementById("lang").innerHTML= navigator.language;
+    document.getElementById("platform").innerHTML= navigator.platform;
+    document.getElementById("online").innerHTML= navigator.online;
+    document.getElementById("product").innerHTML= navigator.product;
+    document.getElementById("userAgent").innerHTML= navigator.userAgent;
+
+    var x = document.getElementById("geo");
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+         function showPosition(position) {
+              x.innerHTML = "Latitude: " + position.coords.latitude + 
+               "<br>Longitude: " + position.coords.longitude;
+         }
+
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+
+
+ 
+ </script>
+     Name of the browser: <span id="appCode"></span> <br>
+     Name:  <span id="appName"></span><br>
+     Version:<span id="appVers"></span><br>
+     Cookie:<span id="cookieEnabl"></span><br>
+     Language:<span id="lang"></span><br>
+     online:<span id="online"></span><br>
+     product:<span id="product"></span><br>
+     User Agent:<span id="userAgent"></span><br>
+     Geo location:<span id="geo"></span><br>
+     Platform:<span id="platform"></span>
+   
+         
+
+    </body>
+</html>
